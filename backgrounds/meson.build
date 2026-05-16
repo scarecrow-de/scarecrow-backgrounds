@@ -29,7 +29,7 @@ backgrounds = [
 
 install_data([adwaita_timed] + backgrounds, install_dir: backgrounddir)
 
-foreach metadata : ['gnome-backgrounds.xml', 'adwaita.xml']
+foreach metadata : ['scarecrow-backgrounds.xml', 'adwaita.xml']
   configure_file(
     input: metadata + '.in',
     output: metadata,
