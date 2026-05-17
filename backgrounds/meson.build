@@ -3,8 +3,8 @@ dataconf.set('BACKGROUNDDIR', backgrounddir)
 dataconf.set('datadir', datadir)
 
 adwaita_timed = configure_file(
-  input: 'adwaita-timed.xml.in',
-  output: 'adwaita-timed.xml',
+  input: 'scarecrow-adwaita-timed.xml.in',
+  output: 'scarecrow-adwaita-timed.xml',
   configuration: dataconf
 )
 
@@ -29,7 +29,7 @@ backgrounds = [
 
 install_data([adwaita_timed] + backgrounds, install_dir: backgrounddir)
 
-foreach metadata : ['scarecrow-backgrounds.xml', 'adwaita.xml']
+foreach metadata : ['scarecrow-backgrounds.xml', 'scarecrow-adwaita.xml']
   configure_file(
     input: metadata + '.in',
     output: metadata,
